@@ -1,0 +1,30 @@
+﻿<Window x:Class="UrunTakip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UrunTakip"
+        mc:Ignorable="d"
+        Title="Ürün listesi" Background="#212121" ResizeMode="noresize" Height="500" Width="800">
+    <Grid>
+        <TextBlock Foreground="White" x:Name="urun_adi" HorizontalAlignment="Left" Margin="40,84,0,0" TextWrapping="Wrap" Text="Ürün adı" VerticalAlignment="Top"/>
+        <TextBlock Foreground="White" x:Name="urun_no" HorizontalAlignment="Left" Margin="40,134,0,0" TextWrapping="Wrap" Text="Ürün seri numarası" VerticalAlignment="Top"/>
+        <TextBlock Foreground="White" x:Name="urun_giris_fiyati" HorizontalAlignment="Left" Margin="40,184,0,0" TextWrapping="Wrap" Text="Ürün giriş fiyatı" VerticalAlignment="Top"/>
+        <TextBlock Foreground="White" x:Name="urun_cikis_fiyati" HorizontalAlignment="Left" Margin="40,234,0,0" TextWrapping="Wrap" Text="Ürün satış fiyatı" VerticalAlignment="Top" Width="99" Height="17"/>
+
+
+
+        <TextBox Background="#2d2d2d" Foreground="White" x:Name="urun_adi_txt" HorizontalAlignment="Left" Margin="180,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Background="#2d2d2d" Foreground="White" x:Name="urun_no_txt" HorizontalAlignment="Left" Margin="180,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Background="#2d2d2d" PreviewTextInput="RakamGirisi" Foreground="White" x:Name="urun_giris_txt" HorizontalAlignment="Left" Margin="180,184,0,0" TextWrapping="Wrap" Text="₺" VerticalAlignment="Top" Width="120"/>
+        <TextBox Background="#2d2d2d" PreviewTextInput="RakamGirisi" Foreground="White" x:Name="urun_cikis_txt" HorizontalAlignment="Left" Margin="180,234,0,0" TextWrapping="Wrap" Text="₺" VerticalAlignment="Top" Width="120"/>
+
+        <Button Background="Green" x:Name="urun_ekle" Content="Ürün Ekle" HorizontalAlignment="Left" Margin="200,330,0,0" VerticalAlignment="Top" Height="25" Width="100" Click="urun_ekle_Click"/>
+        <Button Background="#FFB50000" x:Name="urun_sil" Content="Ürün Kaldır" HorizontalAlignment="Left" Margin="530,403,0,0" VerticalAlignment="Top" Height="25" Width="150" Click="urun_sil_Click_1"/>
+        <Button x:Name="urun_temizle" Content="Temizle" HorizontalAlignment="Left" Margin="40,330,0,0" VerticalAlignment="Top" Height="25" Width="100" Click="urun_temizle_Click_1"/>
+
+
+        <ListBox Background="#2d2d2d" Foreground="white" x:Name="urun_listesi" d:ItemsSource="{d:SampleData ItemCount=20}" Margin="450,58,40,96" Height="290"/>
+
+    </Grid>
+</Window>
