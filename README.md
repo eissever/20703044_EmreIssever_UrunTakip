@@ -1,1 +1,1 @@
-UrunTakip
+Ürün giriş, çıkış takip sistemi.
